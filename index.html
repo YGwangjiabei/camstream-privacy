@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CamStream 隐私政策</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: #1f2933;
+      background: #f7f8fa;
+    }
+    body {
+      margin: 0;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+      background: #ffffff;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    h1, h2 {
+      color: #111827;
+      line-height: 1.28;
+    }
+    h1 {
+      font-size: 32px;
+      margin: 0 0 8px;
+    }
+    h2 {
+      font-size: 21px;
+      margin-top: 32px;
+    }
+    p, li {
+      font-size: 16px;
+    }
+    .meta {
+      color: #52606d;
+      margin: 4px 0;
+    }
+    .notice {
+      border: 1px solid #d9e2ec;
+      background: #f0f4f8;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    strong {
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>CamStream 隐私政策</h1>
+    <p class="meta">生效日期：2026-07-01</p>
+    <p class="meta">开发者/运营者：王贺</p>
+    <p class="meta">联系方式：h24789463@163.com</p>
+
+    <div class="notice">
+      CamStream 不需要用户注册或登录。当前产品流程不会将相机画面或麦克风音频上传到 CamStream 云服务器。
+    </div>
+
+    <h2>1. 概述</h2>
+    <p>CamStream 用于帮助用户将 HarmonyOS 手机作为电脑的本地摄像头来源。本隐私政策说明 CamStream 如何处理相机画面、可选的麦克风音频以及本地连接相关信息。</p>
+    <p>CamStream 的核心功能是由用户主动控制的本地推流：用户授权相机或麦克风权限后，应用可以显示实时预览，并在用户开始推流后，将音视频数据传输到用户连接的电脑接收端。</p>
+
+    <h2>2. 我们处理的信息</h2>
+    <p><strong>相机数据：</strong>用于显示手机摄像头实时预览，并在用户开始推流后，将画面传输到用户连接的电脑。</p>
+    <p><strong>麦克风数据：</strong>当用户授权麦克风权限并使用音频推流能力时，用于将麦克风音频随视频一起传输到用户连接的电脑。</p>
+    <p><strong>网络与连接信息：</strong>用于建立本地 TCP 连接，支持电脑接收端连接手机。该连接可以通过局域网完成，也可以通过 USB/HDC 端口转发在用户的手机与电脑之间完成。</p>
+    <p><strong>诊断信息：</strong>在开发、调试或排查问题时，系统日志可能包含运行状态、错误信息、连接状态等技术诊断信息。这些信息仅用于定位应用问题，不用于识别用户身份。</p>
+
+    <h2>3. 信息使用目的</h2>
+    <p>我们仅为以下目的处理上述信息：提供手机摄像头预览和推流功能、将音视频传输到用户连接的电脑、展示连接状态、协助用户完成本地接收端连接，以及排查应用运行问题。</p>
+
+    <h2>4. 数据存储与上传</h2>
+    <p>CamStream 不提供账号系统，也不要求用户注册或登录。</p>
+    <p>当前本地接收端工作流程不会将相机画面或麦克风音频上传到 CamStream 云服务器。</p>
+    <p>CamStream 不会将相机或麦克风内容作为产品功能进行持久化录制或保存。音视频数据仅在用户使用实时预览或主动开始推流时进行处理。</p>
+
+    <h2>5. 权限说明</h2>
+    <p><strong>相机权限：</strong>用于采集手机摄像头画面，提供实时预览和本地推流。</p>
+    <p><strong>麦克风权限：</strong>用于在用户需要音频推流时采集麦克风声音。</p>
+    <p><strong>网络权限：</strong>用于在手机与用户电脑之间建立本地接收端连接，包括局域网连接或 USB/HDC 端口转发连接。</p>
+    <p><strong>网络状态权限：</strong>用于支持连接信息展示和接收端连接流程。</p>
+
+    <h2>6. 信息共享</h2>
+    <p>CamStream 不出售个人信息。相机画面和麦克风音频仅在用户主动使用本地推流功能时，传输到用户自己选择并连接的电脑或接收端。</p>
+
+    <h2>7. 用户控制</h2>
+    <p>用户可以在系统权限弹窗中拒绝相机或麦克风权限，也可以在系统设置中撤回相关权限。若拒绝相机权限，摄像头预览和推流核心功能将无法使用；若拒绝麦克风权限，视频推流可在无音频的情况下继续使用。</p>
+    <p>用户可以随时在应用内停止推流。</p>
+
+    <h2>8. 未成年人隐私</h2>
+    <p>CamStream 并非面向儿童设计，也不会有意收集儿童个人信息。如果你认为儿童通过 CamStream 提供了个人信息，请通过本政策中的联系方式与我们联系。</p>
+
+    <h2>9. 政策更新</h2>
+    <p>当产品功能或信息处理方式发生变化时，我们可能更新本隐私政策。更新后的版本会发布在本页面。</p>
+
+    <h2>10. 联系我们</h2>
+    <p>如对本隐私政策或个人信息处理有任何问题，请联系：h24789463@163.com。</p>
+  </main>
+</body>
+</html>
