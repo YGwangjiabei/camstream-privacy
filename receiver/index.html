@@ -57,7 +57,7 @@
 <body>
   <main>
     <h1>流光之眼电脑接收器</h1>
-    <p class="muted">Windows 版电脑端，用于接收手机摄像头画面，并输出到 OBS Virtual Camera 或预览窗口。</p>
+    <p class="muted">Windows 版电脑端，用于接收手机摄像头画面，并输出到 OBS Virtual Camera。默认推荐低延迟入口，需要调方向时可打开预览。</p>
 
     <section class="card">
       <h2>下载安装</h2>
@@ -72,17 +72,23 @@
         <li>在 Windows 电脑安装本接收器。</li>
         <li>安装 DevEco Studio 或 HO-Kit，让电脑具备 <code>hdc.exe</code> 手机连接工具。</li>
         <li>用 USB 连接并解锁 HarmonyOS 手机，允许 HDC / USB 调试授权。</li>
-        <li>打开“流光之眼电脑接收器”。</li>
+        <li>打开“流光之眼电脑接收器（低延迟）”。需要看预览按钮时，打开“带预览”入口或在控制台按 <code>p</code>。</li>
         <li>在手机 App 中点击“开始推流”。</li>
-        <li>如果画面方向不对，在接收器预览窗口顶部点击旋转、镜像或全屏按钮。</li>
+        <li>如果画面方向不对，用快捷键 <code>[</code>、<code>]</code>、<code>h</code>、<code>v</code>、<code>r</code> 调整。</li>
         <li>在会议软件中选择 <code>OBS Virtual Camera</code>。</li>
       </ol>
     </section>
 
     <section class="card">
+      <h2>低延迟和带预览</h2>
+      <p><strong>低延迟入口：</strong>默认不打开预览窗口，只输出虚拟摄像头，适合会议软件长期使用。</p>
+      <p><strong>带预览入口：</strong>启动时打开控制预览窗口，适合第一次调方向或排查连接。预览可能增加延迟，调好后可以按 <code>p</code> 关闭。</p>
+    </section>
+
+    <section class="card">
       <h2>画面方向调整</h2>
-      <p>接收器默认会打开一个控制预览窗口。窗口顶部提供左转、右转、水平镜像、垂直镜像、全屏和重置按钮；也可以使用快捷键 <code>[</code>、<code>]</code>、<code>h</code>、<code>v</code>、<code>f</code>、<code>r</code>、<code>q</code>。</p>
-      <p>方向设置会同时作用于预览窗口和 <code>OBS Virtual Camera</code> 输出，并保存在本机，下次启动接收器时自动沿用。</p>
+      <p>快捷键：<code>[</code> 左转，<code>]</code> 右转，<code>h</code> 水平镜像，<code>v</code> 垂直镜像，<code>f</code> 全屏，<code>r</code> 重置，<code>p</code> 开关预览，<code>q</code> 退出。</p>
+      <p>方向设置会同时作用于预览窗口和 <code>OBS Virtual Camera</code> 输出。90/270 度旋转时，输出尺寸会从横向切换为竖向。</p>
     </section>
 
     <section class="card">
