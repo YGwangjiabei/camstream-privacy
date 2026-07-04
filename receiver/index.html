@@ -5,15 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>流光之眼电脑接收器下载</title>
   <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5b667a;
+      --line: #dfe7f2;
+      --panel: #ffffff;
+      --page: #f7f9fc;
+      --accent: #195bd8;
+      --soft: #e8eef8;
+      --ok: #0f766e;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-      color: #172033;
-      background: #f7f9fc;
+      color: var(--ink);
+      background: var(--page);
       line-height: 1.7;
     }
     main {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px 64px;
     }
@@ -23,14 +35,18 @@
       line-height: 1.25;
     }
     h2 {
-      margin-top: 32px;
+      margin: 0 0 12px;
       font-size: 20px;
+    }
+    .lead {
+      margin: 0;
+      color: var(--muted);
     }
     .card {
       margin-top: 20px;
       padding: 22px;
-      background: #fff;
-      border: 1px solid #e1e7f0;
+      background: var(--panel);
+      border: 1px solid var(--line);
       border-radius: 8px;
       box-shadow: 0 10px 30px rgba(24, 39, 75, 0.06);
     }
@@ -40,36 +56,45 @@
       margin-right: 10px;
       padding: 12px 18px;
       color: #fff;
-      background: #195bd8;
+      background: var(--accent);
       border-radius: 6px;
       text-decoration: none;
       font-weight: 700;
     }
     .button.secondary {
-      color: #172033;
-      background: #e7edf7;
+      color: var(--ink);
+      background: var(--soft);
     }
     code {
       padding: 2px 5px;
       background: #eef3fb;
       border-radius: 4px;
+      overflow-wrap: anywhere;
     }
     .muted {
-      color: #5b667a;
+      color: var(--muted);
+    }
+    .ok {
+      color: var(--ok);
+      font-weight: 700;
+    }
+    ol, ul {
+      padding-left: 22px;
     }
   </style>
 </head>
 <body>
   <main>
     <h1>流光之眼电脑接收器</h1>
-    <p class="muted">Windows 版电脑端，用于接收手机摄像头画面，并输出到 OBS Virtual Camera。新版默认使用悬浮控制条，不显示命令行；需要看画面时点击“预览”。</p>
+    <p class="lead">Windows 电脑端，用于接收手机摄像头画面，并输出到 OBS Virtual Camera。新版默认使用悬浮控制条，不显示命令行窗口。</p>
 
     <section class="card">
       <h2>下载安装</h2>
-      <p>下载并运行安装器，然后按向导完成安装。</p>
-      <a class="button" href="./CamStreamReceiverSetup-1.0.0.exe">下载 CamStreamReceiverSetup-1.0.0.exe</a>
-      <a class="button secondary" href="https://raw.githubusercontent.com/YGwangjiabei/camstream-privacy/ee1f9c8b48092ea150f55698db6b1d44abaf8192/receiver/CamStreamReceiverSetup-1.0.0-previous.exe">下载上一版备用包</a>
-      <p class="muted">如果新版异常，可安装上一版备用包回退；备用包走固定归档链接，不占用当前下载页部署体积。</p>
+      <p>下载并运行安装器，按向导完成安装。安装后会有普通入口和调试入口，普通用户打开“流光之眼电脑接收器”即可。</p>
+      <a class="button" href="./CamStreamReceiverSetup-1.0.0.exe?v=90c5fdd">下载 CamStreamReceiverSetup-1.0.0.exe</a>
+      <a class="button secondary" href="./CamStreamReceiverSetup-1.0.0-previous.exe">下载上一版备用包</a>
+      <p class="muted">新版 SHA256：<code>90C5FDD7625458561F78D12F22E7FF3080813062296B7E35068F1E3AD449A010</code></p>
+      <p class="muted">如果新版电脑端异常，可安装上一版备用包回退。</p>
     </section>
 
     <section class="card">
@@ -80,36 +105,34 @@
         <li>用 USB 连接并解锁 HarmonyOS 手机，允许 HDC / USB 调试授权。</li>
         <li>打开“流光之眼电脑接收器”，等待悬浮控制条显示连接状态。</li>
         <li>在手机 App 中点击“开始推流”。</li>
-        <li>如果画面方向不对，用悬浮控制条按钮调整；需要看画面时点击“预览”，需要大画面时点击“全屏”。</li>
+        <li>如果方向不对，用悬浮控制条调整旋转、镜像、预览和全屏。</li>
         <li>在会议软件中选择 <code>OBS Virtual Camera</code>。</li>
       </ol>
     </section>
 
     <section class="card">
+      <h2>本版修复重点</h2>
+      <ul>
+        <li><span class="ok">预览稳定：</span>预览窗口和接收后端分离，打开/关闭预览不应中断虚拟摄像头输出。</li>
+        <li><span class="ok">竖屏比例：</span>旋转后保持等比缩放，竖屏画面放入横屏画布，不再把人物拉宽。</li>
+        <li><span class="ok">更多面板：</span>详细状态面板支持滚动，可查看 HDC、设备、FPS、丢帧、队列延迟和最近错误。</li>
+      </ul>
+    </section>
+
+    <section class="card">
       <h2>悬浮窗和调试模式</h2>
-      <p><strong>普通入口：</strong>默认打开悬浮控制条，不显示命令行窗口。控制条会显示连接状态、虚拟摄像头状态和输入/输出 FPS；更多面板会显示 HDC 路径、手机序列号、丢帧数、队列延迟和最近错误。</p>
-      <p><strong>预览：</strong>点击“预览”即可打开或关闭普通画面预览，关闭预览不会影响虚拟摄像头输出。</p>
-      <p><strong>全屏：</strong>点击“全屏”会先打开预览窗口并切换预览全屏，再次点击退出预览全屏；它不改变会议软件里的虚拟摄像头输出。</p>
+      <p><strong>普通入口：</strong>默认打开悬浮控制条，不显示命令行窗口。控制条会显示连接状态、虚拟摄像头状态和输入/输出 FPS。</p>
+      <p><strong>预览：</strong>点击“预览”打开或关闭普通画面预览。关闭预览不会影响 OBS Virtual Camera 输出。</p>
+      <p><strong>全屏：</strong>点击“全屏”会先打开预览窗口，再切换预览全屏。再次点击退出预览全屏。</p>
       <p><strong>调试模式：</strong>安装后还会提供“流光之眼电脑接收器（调试模式）”，用于查看 HDC、USB 转发、H.264 和虚拟摄像头日志。</p>
-    </section>
-
-    <section class="card">
-      <h2>画面方向调整</h2>
-      <p>普通模式默认禁用键盘快捷键，避免中文输入法或打字误触。请使用悬浮控制条按钮完成旋转、镜像、预览、全屏、重置和退出。</p>
-      <p>方向设置会同时作用于预览窗口和 <code>OBS Virtual Camera</code> 输出。90/270 度旋转会保持比例；如果竖屏虚拟摄像头不可用，会回退到横屏画布内等比显示，避免人物变胖。</p>
-    </section>
-
-    <section class="card">
-      <h2>没有虚拟摄像头怎么办</h2>
-      <p>如果电脑没有可用的虚拟摄像头后端，接收器会打开预览窗口。你可以用 OBS 的“窗口采集”捕获这个预览窗口，再通过 OBS 虚拟摄像头输出给会议软件。</p>
     </section>
 
     <section class="card">
       <h2>常见问题</h2>
       <p><strong>找不到手机：</strong>重新插拔 USB，保持手机解锁，并确认 HDC 授权。</p>
-      <p><strong>找不到 hdc.exe：</strong>安装 DevEco Studio / HO-Kit，或在悬浮控制窗里点击“选择 HDC”。</p>
-      <p><strong>一直等待：</strong>请回到手机 App，确认已经点击“开始推流”。</p>
-      <p><strong>会议软件黑屏：</strong>确认接收器窗口已经显示收到帧，并在会议软件中选择 <code>OBS Virtual Camera</code>。</p>
+      <p><strong>找不到 hdc.exe：</strong>安装 DevEco Studio / HO-Kit，或在悬浮控制条“更多”里选择 HDC。</p>
+      <p><strong>一直等待：</strong>回到手机 App，确认已经点击“开始推流”。</p>
+      <p><strong>会议软件黑屏：</strong>确认接收器已经收到帧，并在会议软件中选择 <code>OBS Virtual Camera</code>。</p>
     </section>
   </main>
 </body>
