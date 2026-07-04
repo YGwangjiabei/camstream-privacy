@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>流光之眼电脑接收器下载</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: #172033;
+      background: #f7f9fc;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.25;
+    }
+    h2 {
+      margin-top: 32px;
+      font-size: 20px;
+    }
+    .card {
+      margin-top: 20px;
+      padding: 22px;
+      background: #fff;
+      border: 1px solid #e1e7f0;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(24, 39, 75, 0.06);
+    }
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      color: #fff;
+      background: #195bd8;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    code {
+      padding: 2px 5px;
+      background: #eef3fb;
+      border-radius: 4px;
+    }
+    .muted {
+      color: #5b667a;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>流光之眼电脑接收器</h1>
+    <p class="muted">Windows 版电脑端，用于接收手机摄像头画面，并输出到 OBS Virtual Camera 或预览窗口。</p>
+
+    <section class="card">
+      <h2>下载安装</h2>
+      <p>下载并运行安装器，然后按向导完成安装。</p>
+      <a class="button" href="./CamStreamReceiverSetup-1.0.0.exe">下载 CamStreamReceiverSetup-1.0.0.exe</a>
+      <p class="muted">如果下载链接暂未发布，请联系开发者获取同名安装包。</p>
+    </section>
+
+    <section class="card">
+      <h2>使用步骤</h2>
+      <ol>
+        <li>在 Windows 电脑安装本接收器。</li>
+        <li>安装 DevEco Studio 或 HO-Kit，让电脑具备 <code>hdc.exe</code> 手机连接工具。</li>
+        <li>用 USB 连接并解锁 HarmonyOS 手机，允许 HDC / USB 调试授权。</li>
+        <li>打开“流光之眼电脑接收器”。</li>
+        <li>在手机 App 中点击“开始推流”。</li>
+        <li>如果画面方向不对，在接收器预览窗口顶部点击旋转、镜像或全屏按钮。</li>
+        <li>在会议软件中选择 <code>OBS Virtual Camera</code>。</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>画面方向调整</h2>
+      <p>接收器默认会打开一个控制预览窗口。窗口顶部提供左转、右转、水平镜像、垂直镜像、全屏和重置按钮；也可以使用快捷键 <code>[</code>、<code>]</code>、<code>h</code>、<code>v</code>、<code>f</code>、<code>r</code>、<code>q</code>。</p>
+      <p>方向设置会同时作用于预览窗口和 <code>OBS Virtual Camera</code> 输出，并保存在本机，下次启动接收器时自动沿用。</p>
+    </section>
+
+    <section class="card">
+      <h2>没有虚拟摄像头怎么办</h2>
+      <p>如果电脑没有可用的虚拟摄像头后端，接收器会打开预览窗口。你可以用 OBS 的“窗口采集”捕获这个预览窗口，再通过 OBS 虚拟摄像头输出给会议软件。</p>
+    </section>
+
+    <section class="card">
+      <h2>常见问题</h2>
+      <p><strong>找不到手机：</strong>重新插拔 USB，保持手机解锁，并确认 HDC 授权。</p>
+      <p><strong>找不到 hdc.exe：</strong>安装 DevEco Studio / HO-Kit，或在接收器提示时粘贴 <code>hdc.exe</code> 的完整路径。</p>
+      <p><strong>一直等待：</strong>请回到手机 App，确认已经点击“开始推流”。</p>
+      <p><strong>会议软件黑屏：</strong>确认接收器窗口已经显示收到帧，并在会议软件中选择 <code>OBS Virtual Camera</code>。</p>
+    </section>
+  </main>
+</body>
+</html>
